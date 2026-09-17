@@ -1,0 +1,62 @@
+:root {
+  color-scheme: light;
+  --color-background: #f8f8f6;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f2f2ef;
+  --color-text: #1d1d1b;
+  --color-text-muted: #73736f;
+  --color-border: #e4e4df;
+  --color-accent: #e23744;
+  --color-accent-hover: #c92f3b;
+  --color-accent-soft: #fff0f1;
+  --color-focus: rgba(226, 55, 68, 0.22);
+  --shadow-card: 0 18px 60px rgba(32, 32, 28, 0.08);
+  --radius-card: 24px;
+  --radius-control: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+
+  :root:not([data-theme]) {
+    --color-background: #171715;
+    --color-surface: #222220;
+    --color-surface-muted: #2b2b28;
+    --color-text: #f5f5f1;
+    --color-text-muted: #a8a8a1;
+    --color-border: #3b3b37;
+    --color-accent: #f05a65;
+    --color-accent-hover: #ff7079;
+    --color-accent-soft: #382326;
+    --color-focus: rgba(240, 90, 101, 0.28);
+    --shadow-card: 0 18px 60px rgba(0, 0, 0, 0.28);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-background: #171715;
+  --color-surface: #222220;
+  --color-surface-muted: #2b2b28;
+  --color-text: #f5f5f1;
+  --color-text-muted: #a8a8a1;
+  --color-border: #3b3b37;
+  --color-accent: #f05a65;
+  --color-accent-hover: #ff7079;
+  --color-accent-soft: #382326;
+  --color-focus: rgba(240, 90, 101, 0.28);
+  --shadow-card: 0 18px 60px rgba(0, 0, 0, 0.28);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+/* Keep the system palette available when no manual preference is selected. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light dark;
+  }
+}
